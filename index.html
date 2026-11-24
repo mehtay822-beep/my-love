@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Karishma ❤️</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<!-- COUNTDOWN SCREEN -->
+<section class="screen active" id="countdownScreen">
+    <div class="glass">
+        <div class="small-heart">♡</div>
+        <h1>Something Special</h1>
+        <h2>Is Waiting For You...</h2>
+        <p>A little surprise made with lots of love ❤️</p>
+
+        <div class="countdown">
+            <div><span id="days">00</span><small>Days</small></div>
+            <div><span id="hours">00</span><small>Hours</small></div>
+            <div><span id="minutes">00</span><small>Minutes</small></div>
+            <div><span id="seconds">00</span><small>Seconds</small></div>
+        </div>
+    </div>
+</section>
+
+<!-- GIFT SCREEN -->
+<section class="screen" id="giftScreen">
+    <div class="glass">
+        <p class="eyebrow">A little surprise for you</p>
+        <h1>Your Special Gift 🎁</h1>
+        <p>Someone has prepared something beautiful for you.</p>
+
+        <div class="gift-box" onclick="openGift()">
+            <div class="gift-lid"></div>
+            <div class="gift-body">🎁</div>
+        </div>
+
+        <button onclick="openGift()">Open Your Gift ❤️</button>
+    </div>
+</section>
+
+<!-- PASSWORD SCREEN -->
+<section class="screen" id="passwordScreen">
+    <div class="glass">
+        <img src="images/couple1.jpg" class="main-photo" alt="Our Picture">
+
+        <h1>A Little Secret ❤️</h1>
+        <p>Enter the secret password to unlock your surprise.</p>
+
+        <input id="passwordInput" type="password"
+        maxlength="4" inputmode="numeric" placeholder="••••">
+
+        <p id="passwordError" class="error"></p>
+
+        <button onclick="checkPassword()">Unlock My Surprise</button>
+    </div>
+</section>
+
+<!-- BIRTHDAY SCREEN -->
+<section class="screen" id="birthdayScreen">
+    <div class="glass birthday-glass">
+        <div class="birthday-crown">👑</div>
+        <p class="eyebrow">Today is all about you</p>
+
+        <h1 class="birthday-title">Happy Birthday</h1>
+        <h2 class="karishma-name">Karishma ❤️</h2>
+
+        <img src="images/couple1.jpg" class="main-photo" alt="Us">
+
+        <p class="birthday-message">
+            You make my world more beautiful.
+            May your smile shine forever. ❤️
+        </p>
+
+        <div class="age-box">
+            <h3>Every Second With You Is Precious</h3>
+            <div class="age-counter">
+                <div><span id="ageYears">0</span><small>Years</small></div>
+                <div><span id="ageMonths">0</span><small>Months</small></div>
+                <div><span id="ageDays">0</span><small>Days</small></div>
+                <div><span id="ageHours">0</span><small>Hours</small></div>
+                <div><span id="ageMinutes">0</span><small>Minutes</small></div>
+                <div><span id="ageSeconds">0</span><small>Seconds</small></div>
+            </div>
+        </div>
+
+        <button onclick="goTo('heartbeatScreen')">Continue ❤️</button>
+    </div>
+</section>
+
+<!-- HEARTBEAT SCREEN -->
+<section class="screen" id="heartbeatScreen">
+    <div class="glass">
+        <p class="eyebrow">A little feeling from my heart</p>
+        <div class="big-heart">❤️</div>
+        <h1>My Heart Beats For You</h1>
+        <p>
+            No matter where life takes us,
+            a special place in my heart will always belong to you.
+        </p>
+        <button onclick="goTo('roseScreen')">A Garden For You 🌹</button>
+    </div>
+</section>
+
+<!-- ROSE GARDEN -->
+<section class="screen" id="roseScreen">
+    <div class="glass">
+        <p class="eyebrow">Made with love</p>
+        <h1>My Rose Garden 🌹</h1>
+        <p>Every rose reminds me of your beautiful smile.</p>
+
+        <div class="rose-garden">
+            <span>🌹</span>
+            <span>🌷</span>
+            <span>🌹</span>
+            <span>🌷</span>
+            <span>🌹</span>
+            <span>🌷</span>
+            <span>🌹</span>
+        </div>
+
+        <h2>For The Most Beautiful Girl ❤️</h2>
+        <button onclick="goTo('giftsScreen')">Our First Gifts 🎁</button>
+    </div>
+</section>
+
+<!-- FIRST GIFTS -->
+<section class="screen" id="giftsScreen">
+    <div class="glass">
+        <p class="eyebrow">Little things, priceless memories</p>
+        <h1>Our First Gifts</h1>
+
+        <div class="memory-gift">
+            <div class="gift-icon">🖊️</div>
+            <h2>A Fountain Pen</h2>
+            <p>From Yuvraj to Karishma</p>
+            <small>A little gift, carrying so many feelings.</small>
+        </div>
+
+        <div class="memory-gift">
+            <div class="gift-icon">🪙</div>
+            <h2>A Silver Coin</h2>
+            <p>From Karishma to Yuvraj</p>
+            <small>A small treasure that became priceless.</small>
+        </div>
+
+        <p class="love-quote">
+            They were just two little gifts, but they became
+            priceless memories in our love story. ❤️
+        </p>
+
+        <div class="date-card">
+            <h3>14 November 2024</h3>
+            <p>The Day I Proposed ❤️</p>
+            <h3>14 November 2026</h3>
+            <p>Two Years Of Us</p>
+        </div>
+
+        <button onclick="goTo('universeScreen')">Our Little Universe ✨</button>
+    </div>
+</section>
+
+<!-- UNIVERSE -->
+<section class="screen" id="universeScreen">
+    <div class="glass universe-glass">
+        <p class="eyebrow">Two souls, one beautiful story</p>
+        <h1>Our Little Universe</h1>
+
+        <div class="universe">
+            <div class="orbit"></div>
+            <div class="universe-star star-one">⭐</div>
+            <div class="universe-star star-two">✨</div>
+            <div class="universe-heart">❤️</div>
+        </div>
+
+        <h2>In this huge universe...</h2>
+        <p>My favourite place is wherever you are.</p>
+
+        <button onclick="goTo('cakeScreen')">Let's Cut The Cake 🎂</button>
+    </div>
+</section>
+
+<!-- CAKE CUTTING -->
+<section class="screen" id="cakeScreen">
+    <div class="glass cake-glass">
+        <p class="eyebrow">Make a wish, my love</p>
+        <h1>Happy Birthday Karishma 🎂</h1>
+        <p>Swipe your finger across the cake to cut it!</p>
+
+        <div class="cake-instruction">👆 SWIPE ACROSS THE CAKE 👆</div>
+
+        <div class="cake-stage" id="cakeStage">
+
+            <div class="cake-half cake-left">
+                <div class="candles">
+                    <span>🕯️</span>
+                    <span>🕯️</span>
+                    <span>🕯️</span>
+                </div>
+                <div class="cake-top"></div>
+                <div class="cake-body"></div>
+                <div class="cake-bottom"></div>
+            </div>
+
+            <div class="cake-half cake-right">
+                <div class="candles">
+                    <span>🕯️</span>
+                    <span>🕯️</span>
+                    <span>🕯️</span>
+                </div>
+                <div class="cake-top"></div>
+                <div class="cake-body"></div>
+                <div class="cake-bottom"></div>
+            </div>
+
+        </div>
+
+        <div id="cakeSuccess" class="cake-success">
+            <h2>Yay! You Did It! 🎉</h2>
+            <p>May your life always be as sweet as this cake. ❤️</p>
+            <button onclick="goTo('galleryScreen')">See Our Memories 📸</button>
+        </div>
+
+        <div id="cakeHint" class="cake-hint">
+            Move your finger from left to right across the cake.
+        </div>
+    </div>
+</section>
+
+<!-- PHOTO GALLERY -->
+<section class="screen" id="galleryScreen">
+    <div class="glass">
+        <p class="eyebrow">Our favourite memories</p>
+        <h1>Our Little Gallery ❤️</h1>
+
+        <div class="gallery">
+            <img src="images/couple1.jpg" alt="Memory 1">
+            <img src="images/couple2.jpg" alt="Memory 2">
+            <img src="images/couple3.jpg" alt="Memory 3">
+            <img src="images/couple4.jpg" alt="Memory 4">
+            <img src="images/couple5.jpg" alt="Memory 5">
+            <img src="images/couple6.jpg" alt="Memory 6">
+        </div>
+
+        <p>Every picture holds a memory I never want to forget.</p>
+
+        <button onclick="goTo('letterScreen')">A Secret Letter 💌</button>
+    </div>
+</section>
+
+<!-- LOVE LETTER -->
+<section class="screen" id="letterScreen">
+    <div class="glass">
+        <p class="eyebrow">Something from my heart</p>
+        <h1>A Letter For You 💌</h1>
+
+        <div class="envelope" id="envelope" onclick="openLoveLetter()">
+            <div class="envelope-flap"></div>
+            <div class="envelope-paper">❤️</div>
+            <div class="envelope-front">OPEN ME</div>
+        </div>
+
+        <p class="letter-instruction">Tap the envelope to open your letter.</p>
+
+        <div class="letter-content" id="letterContent">
+            <p id="letterText"></p>
+            <h3>Forever Yours,</h3>
+            <h2>Yuvraj ❤️</h2>
+        </div>
+
+        <button onclick="goTo('finalScreen')">One Last Surprise ❤️</button>
+    </div>
+</section>
+
+<!-- FINAL SCREEN -->
+<section class="screen" id="finalScreen">
+    <div class="glass final-glass">
+        <div class="final-hearts">💕 ❤️ 💖</div>
+
+        <img src="images/couple1.jpg" class="main-photo final-photo" alt="Us">
+
+        <h1>Yuvraj <span>❤️</span> Karishma</h1>
+
+        <h2 class="final-title">I LOVE YOU SO MUCH, KARISHMA!</h2>
+
+        <p>
+            Here's to a lifetime of smiles, memories,
+            love and togetherness.
+        </p>
+
+        <h2>Happy Birthday My Love 🎂</h2>
+
+        <div class="final-decoration">✨ 💗 ✨ 💗 ✨</div>
+
+        <button onclick="finalSurprise()">Celebrate Again 🎉</button>
+    </div>
+</section>
+
+<!-- MUSIC -->
+<audio id="romanticMusic" loop>
+    <source src="music/romantic.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="birthdayMusic" loop>
+    <source src="music/birthday-song.mp3" type="audio/mpeg">
+</audio>
+
+<script src="script.js"></script>
+</body>
+</html>
